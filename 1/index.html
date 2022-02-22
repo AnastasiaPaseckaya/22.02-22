@@ -1,0 +1,48 @@
+а<html>
+
+<head>
+	<title>from February 23</title>
+	<link href="core3860.css" rel="stylesheet">
+</head>
+<body>
+		<section id="videos">
+			<video autoplay="1" loop="1">
+				<source type="video/mp4" src="1.mp4">
+			</video>
+			<video autoplay="1" loop="1">
+				<source type="video/mp4" src="2.mp4">
+			</video>
+			<video autoplay="1" loop="1">
+				<source type="video/mp4" src="3.mp4">
+			</video>
+		</section>
+		<script>
+			(function () {
+				"use strict";
+				var videosSection = document.getElementById("videos");
+				var videosSectionClone = videosSection.cloneNode();
+				var videos = videosSection.getElementsByTagName("video");
+				var randomVideo = videos.item(Math.floor(Math.random() * videos.length)).cloneNode(true);
+				randomVideo.removeAttribute("controls");
+				randomVideo.setAttribute("preload", "auto");
+				videosSectionClone.appendChild(randomVideo);
+				videosSection.parentNode.replaceChild(videosSectionClone, videosSection);
+				randomVideo.play();
+			})();
+		</script>
+	<div class="pageOverlay">
+		<div class="lightbox">
+			<div class="wrapper">
+				<div class="container animate center">
+        <div class="logo">
+    
+        </div>
+				<div class="titles animate">
+					<h1>from February 23!</h1>
+					
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
